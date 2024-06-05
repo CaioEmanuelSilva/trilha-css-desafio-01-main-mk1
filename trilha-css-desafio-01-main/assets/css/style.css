@@ -170,17 +170,23 @@ h2 {
   margin: 0;
 }
 
-div {
-  display: block;
-  unicode-bidi: isolate;
-}
-
 a:-webkit-any-link {
   color: -webkit-link;
   cursor: pointer;
   text-decoration: underline;
 }
 
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+/* Remove duplicate selectors */
+:host, :root {
+  --rem: 16;
+}
+
+/* Remove duplicate selectors */
 #professional-challenges {
   text-align: center;
   width: 800px;
@@ -197,15 +203,10 @@ h2 {
   unicode-bidi: isolate;
 }
 
-img {
-  overflow-clip-margin: content-box;
-  overflow: clip;
-}
-
 section {
-}
   display: block;
   unicode-bidi: isolate;
+}
 
 
 #course-content {
