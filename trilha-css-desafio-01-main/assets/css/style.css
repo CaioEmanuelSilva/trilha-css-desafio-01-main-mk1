@@ -149,10 +149,6 @@ h2 {
   margin-bottom: 24px;
 }
 
-p {
-  color: white;
-}
-
 #course-content .modules-list .module span {
   color: #33A8DB;
 }
@@ -168,25 +164,10 @@ p {
   box-shadow: inset -5px 6px 8px rgba(0, 0, 0, .7);
 }
 
-#course-content .modules-list {
-  margin: 24px 0;
-}
-
 * {
   font-family: 'Raleway', sans-serif;
   box-sizing: border-box;
   margin: 0;
-}
-
-#course-content .modules-list .module {
-  color: white;
-  width: 530px;
-  margin: 0 auto 24px;
-  border: 1px solid #33A8DB;
-  background-color: #252525;
-  padding: 16px;
-  border-radius: 100px;
-  box-shadow: inset -5px 6px 8px rgba(0, 0, 0, .7);
 }
 
 div {
@@ -198,15 +179,6 @@ a:-webkit-any-link {
   color: -webkit-link;
   cursor: pointer;
   text-decoration: underline;
-}
-
-p {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  unicode-bidi: isolate;
 }
 
 #professional-challenges {
@@ -231,9 +203,10 @@ img {
 }
 
 section {
+}
   display: block;
   unicode-bidi: isolate;
-}
+
 
 #course-content {
   width: 800px;
