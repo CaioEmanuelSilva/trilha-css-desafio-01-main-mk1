@@ -1,279 +1,252 @@
-/**
- * FILEPATH: /C:/Users/caioe/OneDrive - Fatec Centro Paula Souza/Desktop/trilha-css-desafio-01-main/trilha-css-desafio-01-main/assets/css/style.css
- * 
- * This CSS file contains styles for a website's theme toggle functionality and various elements such as body, header, links, buttons, etc.
- * It defines CSS variables for light and dark mode, and applies transitions for smooth color changes.
- * The code also includes media queries for dark mode support based on user's preferred color scheme.
- * 
- * CSS Selectors:
- * - :root: Sets the CSS variables for light mode.
- * - body: Sets the background color and text color of the body, and applies transition effects.
- * - .dark-mode: Overrides the CSS variables for dark mode.
- * - #theme-toggle.dark-mode: Sets the background color and text color of the theme toggle button in dark mode.
- * - a: Sets the color and transition effects for links.
- * - a:hover: Sets the color on hover for links.
- * - h1, h2, h3: Sets the color, margin, and transition effects for headings.
- * - p: Sets the margin, transition effects, and color for paragraphs.
- * - button: Sets the background color, text color, padding, border, and transition effects for buttons.
- * - button:hover: Sets the background color on hover for buttons.
- * - header: Sets the background color, padding, text alignment, position, and transition effects for the header.
- * - #theme-toggle: Sets the background color, text color, padding, border, and transition effects for the theme toggle button.
- * - #theme-toggle:hover: Sets the background color on hover for the theme toggle button.
- * - .banner-content: Sets the maximum width, margin, padding, display, and alignment for banner content.
- * - .logo img: Sets the height, margin, border radius, and transition effects for the logo image.
- * - .subscribe-button: Sets the background color, text color, padding, text decoration, border radius, margin, display, and transition effects for the subscribe button.
- * - main: Sets the maximum width, margin, padding, background color, box shadow, and border radius for the main content.
- * - #course-content, .module, #professional-challenges: Sets the margin, padding, background color, border, box shadow, and border radius for course content, modules, and professional challenges.
- * - .modules-list: Sets the list style type, padding, margin, border top, and border bottom for the modules list.
- * - #transform-world: Sets the background color, text color, padding, text alignment, margin, font size, and border radius for the "Transform the World" section.
- * - footer: Sets the background color, padding, text alignment, font size, position, box shadow, and transition effects for the footer.
- * - @media (prefers-color-scheme: dark): Overrides the CSS variables for dark mode based on user's preferred color scheme.
- * 
- * CSS Variables:
- * - --light-background: Defines the background color for light mode.
- * - --light-text: Defines the text color for light mode.
- * - --dark-background: Defines the background color for dark mode.
- * - --dark-text: Defines the text color for dark mode.
- * - --background-color: Sets the background color based on the selected mode.
- * - --text-color: Sets the text color based on the selected mode.
- * - --logo-bg-color: Defines the background color for the logo.
- * - --logo-text-color: Defines the text color for the logo.
- * - --logo-border-color: Defines the border color for the logo.
- * - --dark-mode-logo-bg-color: Defines the background color for the logo in dark mode.
- * - --dark-mode-logo-text-color: Defines the text color for the logo in dark mode.
- * - --dark-mode-logo-border-color: Defines the border color for the logo in dark mode.
- * 
- * Transitions:
- * - background-color: Applies a smooth transition effect for background color changes.
- * - color: Applies a smooth transition effect for text color changes.
- * 
- * Media Queries:
- * - @media (prefers-color-scheme: dark): Overrides the CSS variables for dark mode based on user's preferred color scheme.
- */
-:root {
-    --light-background: white;
-    --light-text: black;
-    --dark-background: #333;
-    --dark-text: #f8f9fa;
-    --background-color: var(--light-background);
-    --text-color: var(--light-text);
+/* CSS */
+
+.banner .logo img{
+ margin: auto;
+ width: 100%; 
+ height: 100%;
+ object-fit: contain;
 }
 
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    transition: background-color 0.5s, color 0.5s;
+.banner p {
+  font-size: 1.25rem;
+  margin: 16px 0 24px;
 }
 
-.dark-mode {
-    --background-color: var(--dark-background);
-    --text-color: var(--dark-text);
-}
 
-#theme-toggle.dark-mode {
-    background-color: var(--dark-background);
-    color: var(--dark-text);
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.5s;
-}
-
-a:hover {
-    color: #0056b3;
-}
-
-h1, h2, h3 {
-    color: #007bff;
-    margin: 20px 0;
-    transition: color 0.5s;
-}
-
-h1 {
-    font-size: 36px;
-}
-
-h2 {
-    font-size: 24px;
-}
-
-h3 {
-    font-size: 20px;
+* {
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
 }
 
 p {
-    margin: 20px 0;
-    transition: color 0.5s;
-
-    /* Cores do texto */
-    color: var(--text-color);
-
-    /* Cores do texto no modo escuro */
-    color: var(--dark-text);
-
-
-
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  unicode-bidi: isolate;
 }
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: transparent;
+  background: -webkit-linear-gradient(#33A8DB, #1472B7);
+  background-clip: text;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+   margin-block-end: 0.67em;
+   margin-inline-start: 0px;
+   margin-inline-end: 0px;
+   font-weight: bold;
+   unicode-bidi: isolate;
+ }
+
+ .banner .banner-content button {
+  color: #31A8DD;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background-color: transparent;
+  border-image: linear-gradient(#3BA1CD, #1572B7);
+  border-image-slice: 10;
+  border-radius: 30px;
+ }
 
 button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.5s, color 0.5s;
+  appearance: auto;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  box-sizing: border-box;
+  margin: 0em;
+  padding-block: 1px;
+  padding-inline: 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonborder;
+  border-image: initial;
 }
 
-button:hover { 
-    background-color: #0056b3;
-}
+.banner .banner-content {
+  color: white;
+  width: 600px;
+  margin: auto;
+  text-align: center;
+} 
 
 header {
-    background-color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 20px;
-    transition: background-color 0.5s, color 0.5s;
-
-    /* Cores do logo */
-    color: var(--logo-text-color);
-    border-bottom: 5px solid var(--logo-border-color);
-
-    /* Cores do logo no modo escuro */
-    border-bottom: 5px solid var(--dark-mode-logo-border-color);
-}
-
-#theme-toggle {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.5s, color 0.5s;
-}
-
-#theme-toggle:hover {
-    background-color: #0056b3;
-}
-
-.banner-content {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo img {
-    height: 50px;
-    margin: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.5s, color 0.5s;
-
-    /* Cores do logo */
-    background-color: var(--logo-bg-color);
-
-}
-
-.subscribe-button {
-    background-color: #007bff;
-    color: white;
-    padding: 20px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 20px;
-    display: inline-block;
-    transition: background-color 0.5s, color 0.5s;
+  display: block;
+  unicode-bidi: isolate;
 }
 
 main {
-    max-width: 800px;
-    margin: 100px auto;
-    padding: 20px;
-    background-color: var(--background-color);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    transition: background-color 0.5s, color 0.5s;
+  display: block;
+  unicode-bidi: isolate;
 }
 
-#course-content, .module, #professional-challenges {
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-left: 5px solid #007bff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    transition: background-color 0.5s, color 0.5s;
-}
-
-.modules-list {
-    list-style-type: none;
-    padding: 20px 0;
-    margin: 20px 0;
-    border-top: 1px solid #007bff;
-    border-bottom: 1px solid #007bff;
+#transform-world p {
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-transform: lowercase;
+  max-width: 250px;
+  text-shadow: 3px 2px #33A8DB;
 }
 
 #transform-world {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin: 20px 0;
-    font-size: 20px;
-    border-radius: 5px;
-    transition: background-color 0.5s, color 0.5s;
+  height: 560px;
+  background-size: cover;
+  background-image: url(../images/woman-code.png);
+  background-attachment: fixed;
+  border-top: 1px solid #33A8DB80;
+  border-bottom: 1px solid #33A8DB80;
+  padding: 200px;
+}
+
+#professional-challenges img {
+  margin: 32px 0;
+}
+
+#professional-challenges {
+  text-align: center;
+  width: 800px;
+}
+
+section {
+  margin: 100px auto;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #33A8DB;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+p {
+  color: white;
+}
+
+#course-content .modules-list .module span {
+  color: #33A8DB;
+}
+
+#course-content .modules-list .module {
+  color: white;
+  width: 530px;
+  margin: 0 auto 24px;
+  border: 1px solid #33A8DB;
+  background-color: #252525;
+  padding: 16px;
+  border-radius: 100px;
+  box-shadow: inset -5px 6px 8px rgba(0, 0, 0, .7);
+}
+
+#course-content .modules-list {
+  margin: 24px 0;
+}
+
+* {
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#course-content .modules-list .module {
+  color: white;
+  width: 530px;
+  margin: 0 auto 24px;
+  border: 1px solid #33A8DB;
+  background-color: #252525;
+  padding: 16px;
+  border-radius: 100px;
+  box-shadow: inset -5px 6px 8px rgba(0, 0, 0, .7);
+}
+
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+
+#professional-challenges {
+  text-align: center;
+  width: 800px;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+section {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+#course-content {
+  width: 800px;
+  text-align: center;
 }
 
 footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.5s, color 0.5s;
+  padding: 60px 0;
+  text-align: center;
+  background-image: linear-gradient(rgba(50, 168, 219, .0), rgba(50, 168, 219, .2));
+  border-top: 1px solid #33A8DB80;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --main-bg-color: #333;
-        --dark-mode-bg-color: #444;
-        --dark-mode-element-bg-color: #444;
-        --button-bg-color: #007bff;
-        --main-text-color: #f8f9fa;
-        --dark-mode-text-color: #f8f9fa;
-        --link-color: #007bff;
-        --link-hover-color: #0056b3;
-        --shadow-color: rgba(0, 0, 0, 0.1);
-        --border-color: #007bff;
-        --transform-world-bg-color: #007bff;
-        --transform-world-text-color: #f8f9fa;
-
-        /* Cores do logo */
-        --logo-bg-color: #333;
-        --logo-text-color: #000000;
-        --logo-border-color: #007bff;
-
-        /* Cores do logo no modo escuro */
-        --dark-mode-logo-bg-color: #444;
-        --dark-mode-logo-text-color: #f8f9fa;
-        --dark-mode-logo-border-color: #007bff;
-    }
+:host, :root {
+  --rem: 16;
 }
-
-
